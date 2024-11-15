@@ -1,5 +1,6 @@
 server:
   port: ${PORT} 
+
 application:
   security:
     jwt:
@@ -7,10 +8,13 @@ application:
       expiration: 86400000
       refresh-token:
         expiration: 604800000
+
 spring:
   datasource:
-    url: ${DB_URL} 
+    url: ${DB_URL}
     driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
