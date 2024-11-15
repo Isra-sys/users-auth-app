@@ -17,5 +17,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  profiles:
-    active: prod
