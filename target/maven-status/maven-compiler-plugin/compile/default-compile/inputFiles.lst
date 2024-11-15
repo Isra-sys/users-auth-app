@@ -5,6 +5,7 @@ C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\auth\servic
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\auth\service\JwtService.java
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\config\Config.java
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\config\JwtAuthFilter.java
+C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\config\SecurityConfig.java
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\user\User.java
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\user\UserController.java
 C:\Users\israc\Proyectos\users-auth\src\main\java\me\isra\users_auth\user\UserRepository.java

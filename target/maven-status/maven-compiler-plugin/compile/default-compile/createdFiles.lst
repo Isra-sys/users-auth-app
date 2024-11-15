@@ -15,4 +15,5 @@ me\isra\users_auth\user\UserRepository.class
 me\isra\users_auth\user\UserController.class
 me\isra\users_auth\auth\controller\AuthController.class
 me\isra\users_auth\auth\controller\AuthController$RegisterRequest.class
+me\isra\users_auth\config\SecurityConfig.class
 me\isra\users_auth\UsersAuthApplication.class
