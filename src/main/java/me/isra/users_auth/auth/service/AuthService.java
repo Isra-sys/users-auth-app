@@ -71,21 +71,26 @@ public class AuthService {
 
     public TokenResponse refreshToken(final String authHeader) {
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-            throw new IllegalArgumentException("Invalid Refresh Token");
+            throw new IllegalArgumentException("Invalid token");
         }
 
         final String refreshToken = authHeader.substring(7);
+
+        if (!jwtService.isRefreshToken(refreshToken)) {
+            throw new IllegalArgumentException("Token is not a refresh token");
+        }
+
         final String username = jwtService.extractUsername(refreshToken);
 
         if (username == null) {
-            throw new IllegalArgumentException("Invalid Refresh Token");
+            throw new IllegalArgumentException("Invalid refresh token");
         }
 
         final User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException(username));
 
         if (!jwtService.isTokenValid(refreshToken, user)) {
-            throw new IllegalArgumentException("Invalid Refresh Token");
+            throw new IllegalArgumentException("Refresh token is not valid");
         }
 
         final String accessToken = jwtService.generateToken(user);
